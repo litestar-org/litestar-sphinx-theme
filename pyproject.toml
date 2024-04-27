@@ -13,7 +13,7 @@ maintainers = [
 license = { text = "MIT" }
 requires-python = ">=3.8,<4.0"
 name = "litestar-sphinx-theme"
-version = "0.2.0"
+version = "0.3.0"
 description = "A Sphinx theme for the Litestar organization"
 keywords = ["litestar", "sphinx", "theme", "documentation"]
 classifiers = [
@@ -26,6 +26,7 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Programming Language :: Python",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Software Development :: Libraries",
@@ -33,8 +34,13 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "pydata-sphinx-theme<1.0.0,>=0.13.3",
     "sphinx-design<1.0.0,>=0.3.0",
+    "shibuya>=2024.4.4",
+    "sphinx-autobuild>=2021.3.14",
+    "sphinx-copybutton>=0.5.2",
+    "sphinx-toolbox>=3.5.0",
+    "blacken-docs>=1.16.0",
+    "sphinx-togglebutton",
 ]
 
 [project.entry-points."sphinx.html_themes"]
@@ -78,7 +84,7 @@ ignore = [
 ]
 line-length = 120
 src = ["litestar_sphinx_theme"]
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.pydocstyle]
 convention = "google"
